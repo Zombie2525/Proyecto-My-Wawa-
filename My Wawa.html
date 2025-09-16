@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI AMO MI WAWA I LOVE SO MUCH MUCH MUCH 💗</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: radial-gradient(ellipse at center, #0a0a0a, #1a1a2e, #16213e);
+            font-family: 'Comfortaa', cursive;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Fondo mágico adicional */
+        .magic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 20, 147, 0.1) 0%, transparent 50%);
+            animation: magicPulse 8s ease-in-out infinite;
+            z-index: 0;
+        }
+        
+        @keyframes magicPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        /* Partículas mejoradas */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: float 10s infinite linear;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+        }
+        
+        .particle:nth-child(2n) {
+            background: rgba(255, 182, 193, 0.6);
+            animation-duration: 15s;
+            box-shadow: 0 0 8px rgba(255, 182, 193, 0.8);
+        }
+        
+        .particle:nth-child(3n) {
+            background: rgba(138, 43, 226, 0.4);
+            animation-duration: 18s;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.6);
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+            gap: 25px;
+        }
+        
+        /* Nuevo pastel kawaii */
+        .cake-container {
+            position: relative;
+            margin: 20px 0;
+            animation: bounceIn 2s ease-out;
+            filter: drop-shadow(0 15px 30px rgba(255, 105, 180, 0.4));
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0) rotate(-360deg); opacity: 0; }
+            50% { transform: scale(1.1) rotate(-180deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        
+        .kawaii-cake {
+            position: relative;
+            width: 240px;
+            height: 200px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        
+        /* Cuerpo del pastel kawaii */
+        .cake-body {
+            width: 220px;
+            height: 120px;
+            background: linear-gradient(45deg, #FFB6C1, #FFCCCB, #FFE4E6);
+            border-radius: 60px 60px 20px 20px;
+            position: relative;
+            border: 4px solid #FF69B4;
+            animation: cakeFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes cakeFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        /* Cara kawaii */
+        .cake-face {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .eye {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #000;
+            border-radius: 50%;
+            animation: blink 4s infinite;
+        }
+        
+        .eye.left { left: -20px; }
+        .eye.right { right: -20px; }
+        
+        @keyframes blink {
+            0%, 90%, 100% { height: 12px; }
+            95% { height: 2px; }
+        }
+        
+        .blush {
+            position: absolute;
+            width: 15px;
+            height: 8px;
+            background: #FF69B4;
+            border-radius: 50%;
+            opacity: 0.6;
+            top: 5px;
+        }
+        
+        .blush.left { left: -35px; }
+        .blush.right { right: -35px; }
+        
+        .mouth {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 10px;
+            border: 2px solid #000;
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        /* Decoraciones del pastel */
+        .sprinkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .sprinkle {
+            position: absolute;
+            width: 3px;
+            height: 10px;
+            border-radius: 2px;
+            animation: sprinkleShine 3s linear infinite;
+        }
+        
+        .sprinkle:nth-child(1) { background: #FF1493; top: 20%; left: 20%; transform: rotate(45deg); }
+        .sprinkle:nth-child(2) { background: #00CED1; top: 30%; right: 25%; transform: rotate(-30deg); }
+        .sprinkle:nth-child(3) { background: #FFD700; top: 50%; left: 30%; transform: rotate(60deg); }
+        .sprinkle:nth-child(4) { background: #32CD32; top: 40%; right: 20%; transform: rotate(-45deg); }
+        .sprinkle:nth-child(5) { background: #FF69B4; top: 60%; left: 50%; transform: rotate(15deg); }
+        
+        @keyframes sprinkleShine {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; box-shadow: 0 0 8px currentColor; }
+        }
+        
+        /* Vela mágica */
+        .magic-candle {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 35px;
+            background: linear-gradient(45deg, #FF1493, #FFB6C1, #FF69B4);
+            border-radius: 6px;
+            animation: candleGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes candleGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 20, 147, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 20, 147, 0.8); }
+        }
+        
+        /* Llama mágica */
+        .magic-flame {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 20px;
+            background: radial-gradient(circle, #FFD700, #FF4500, #FF1493);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: magicFlicker 1.2s infinite alternate;
+            transition: all 0.5s ease;
+        }
+        
+        @keyframes magicFlicker {
+            0% {
+                transform: translateX(-50%) scale(1) rotate(-2deg);
+                box-shadow: 0 0 20px #FFD700, 0 0 40px #FF4500;
+            }
+            100% {
+                transform: translateX(-50%) scale(1.15) rotate(2deg);
+                box-shadow: 0 0 30px #FFD700, 0 0 60px #FF4500;
+            }
+        }
+        
+        /* Texto principal mejorado */
+        .title {
+            background: linear-gradient(45deg, #FF69B4, #FF1493, #FFB6C1, #FF69B4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: rainbowGlow 3s ease-in-out infinite, textFloat 4s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
+        }
+        
+        @keyframes rainbowGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes textFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        /* Mensaje mejorado */
+        .message {
+            color: #FFB6C1;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 182, 193, 0.1));
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            animation: messageGlow 4s ease-in-out infinite;
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+        }
+        
+        @keyframes messageGlow {
+            0%, 100% { 
+                box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+                border-color: rgba(255, 105, 180, 0.3);
+            }
+            50% { 
+                box-shadow: 0 12px 40px rgba(255, 105, 180, 0.4);
+                border-color: rgba(255, 105, 180, 0.5);
+            }
+        }
+        
+        /* Controles mejorados */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-family: 'Comfortaa', cursive;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+            animation: btnPulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover:before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
+        }
+        
+        @keyframes btnPulse {
+            0%, 100% { box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3); }
+            50% { box-shadow: 0 5px 15px rgba(255, 20, 147, 0.6); }
+        }
+        
+        /* Galería de fotos */
+        .photo-gallery {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .gallery-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .gallery-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #FF69B4;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-close:hover {
+            background: #FF1493;
+            transform: scale(1.1);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        .photo-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background: #1a1a2e;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: #FFB6C1;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 105, 180, 0.5);
+        }
+
+        /* Modal para ver imagen completa */
+        .photo-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .modal-image {
+            max-width: 90%;
+            max-height: 80%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        }
+
+        .modal-caption {
+            color: #FFB6C1;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FF69B4;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #FF1493;
+            transform: scale(1.1);
+        }
+        
+        /* Mensaje fijo del gatito */
+        .love-signature {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 320px;
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.95), rgba(255, 20, 147, 0.95));
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            font-family: 'Comfortaa', cursive;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.4);
+            z-index: 200;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: signatureGlow 4s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .love-signature:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 105, 180, 0.6);
+        }
+
+        @keyframes signatureGlow {
+            0%, 100% { 
+                box-shadow: 0 8px 32px rgba(255, 105, 180, 0.4);
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+            50% { 
+                box-shadow: 0 12px 40px rgba(255, 105, 180, 0.6);
+                border-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .signature-header {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            text-align: center;
+            color: #FFE4E6;
+        }
+
+        .signature-content {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Reproductor de música reposicionado */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, rgba(255, 105, 180, 0.9), rgba(255, 20, 147, 0.9));
+            border-radius: 25px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+            z-index: 150;
+        }
+
+        /* Ondas musicales */
+        .music-waves {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            pointer-events: none;
+            z-index: 50;
+            display: none;
+        }
+
+        .music-waves.active {
+            display: block;
+        }
+
+        .wave-bar {
+            position: absolute;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to top, #FF69B4, #FF1493, #FFB6C1);
+            border-radius: 2px 2px 0 0;
+            animation: waveAnimation 1s ease-in-out infinite;
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+
+        @keyframes waveAnimation {
+            0%, 100% {
+                height: 20px;
+                opacity: 0.6;
+            }
+            50% {
+                height: 80px;
+                opacity: 1;
+            }
+        }
+
+        /* Diferentes delays para crear efecto de onda */
+        .wave-bar:nth-child(1) { left: 5%; animation-delay: 0s; }
+        .wave-bar:nth-child(2) { left: 10%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(3) { left: 15%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(4) { left: 20%; animation-delay: 0.3s; }
+        .wave-bar:nth-child(5) { left: 25%; animation-delay: 0.4s; }
+        .wave-bar:nth-child(6) { left: 30%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(7) { left: 35%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(8) { left: 40%; animation-delay: 0.3s; }
+        .wave-bar:nth-child(9) { left: 45%; animation-delay: 0.4s; }
+        .wave-bar:nth-child(10) { left: 50%; animation-delay: 0.5s; }
+        .wave-bar:nth-child(11) { left: 55%; animation-delay: 0.4s; }
+        .wave-bar:nth-child(12) { left: 60%; animation-delay: 0.3s; }
+        .wave-bar:nth-child(13) { left: 65%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(14) { left: 70%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(15) { left: 75%; animation-delay: 0s; }
+        .wave-bar:nth-child(16) { left: 80%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(17) { left: 85%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(18) { left: 90%; animation-delay: 0.3s; }
+        .wave-bar:nth-child(19) { left: 95%; animation-delay: 0.4s; }
+        
+        .music-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Fuegos artificiales */
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 200;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: fireworkExplode 2s ease-out forwards;
+        }
+        
+        @keyframes fireworkExplode {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(20);
+            }
+        }
+        
+        /* Mensajes flotantes */
+        .floating-message {
+            position: fixed;
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 600;
+            animation: floatMessage 4s ease-out forwards;
+            z-index: 150;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        @keyframes floatMessage {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(-20px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(0.8);
+            }
+        }
+        
+        /* Efectos adicionales */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: #FF69B4;
+            animation: heartFloat 12s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes heartFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Animaciones para confetti */
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Animación de pulso para el body */
+        @keyframes bodyPulse {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.1); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            .message {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+            
+            .kawaii-cake {
+                width: 200px;
+                height: 160px;
+            }
+            
+            .cake-body {
+                width: 180px;
+                height: 100px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .modal-image {
+                max-width: 95%;
+                max-height: 70%;
+            }
+
+            /* Ajustes para móvil del mensaje y reproductor */
+            .love-signature {
+                max-width: 280px;
+                font-size: 0.75rem;
+                padding: 15px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .music-player {
+                bottom: 15px;
+                left: 15px;
+                padding: 12px;
+            }
+
+            .music-waves {
+                height: 80px;
+            }
+
+            .wave-bar {
+                width: 3px;
+            }
+
+            @keyframes waveAnimation {
+                0%, 100% {
+                    height: 15px;
+                    opacity: 0.6;
+                }
+                50% {
+                    height: 60px;
+                    opacity: 1;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo mágico -->
+    <div class="magic-background"></div>
+    
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Corazones flotantes -->
+    <div class="hearts" id="hearts"></div>
+    
+    <!-- Fuegos artificiales -->
+    <div class="fireworks" id="fireworks"></div>
+    
+    <!-- Audio para la música -->
+    <audio id="musicAudio" loop>
+        <source src="https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/We%20Fell%20In%20Love%20In%20October-Nuestra%20cancion%E2%99%A1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Reproductor de música (reposicionado) -->
+    <div class="music-player">
+        <button class="music-btn" onclick="toggleMusic()" id="musicBtn">🎵</button>
+    </div>
+
+    <!-- Ondas musicales -->
+    <div class="music-waves" id="musicWaves">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+    </div>
+
+    <!-- Mensaje del gatito -->
+    <div class="love-signature">
+        <div class="signature-header">ATT: Tu gatito negro hermoso 💗</div>
+        <div class="signature-content">
+            <strong>Miguel Angel Vega Sanchez</strong><br>
+            solo por ti mi Wawa ♡<br><br>
+            Tu michi ti ama mucho mucho mucho muchísimo mi wawa. MUAH MUAH MUAH ti amo bb Ti amo con todo mi corazón. siempre serás Tú. Siempre Tú, Tú, Tú, Tú y solo Tú ireir. Solo y únicamente tu mi niña linda. Mi bebé. Mi vampi. Mi Wawa. Mi chocolatito blanco 💞
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="cake-container">
+            <div class="kawaii-cake" onclick="cakeClick()">
+                <div class="cake-body">
+                    <div class="sprinkles">
+                        <div class="sprinkle"></div>
+                        <div class="sprinkle"></div>
+                        <div class="sprinkle"></div>
+                        <div class="sprinkle"></div>
+                        <div class="sprinkle"></div>
+                    </div>
+                    <div class="cake-face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="blush left"></div>
+                        <div class="blush right"></div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+                <div class="magic-candle">
+                    <div class="magic-flame" id="flame"></div>
+                </div>
+            </div>
+        </div>
+        
+        <h1 class="title">Ti amo Ireri 💗</h1>
+        
+        <div class="message">
+            <p><strong>Muah muah muah espero te encante mi niña ^^💞</strong></p>
+            <p>Recuerda mucho mucho que tu lindo gatito ti amaaaa mucho mucho mucho mushísimo y que haría de todo por ti.</p>
+            <p><em>Que yo haría todo por ti mi wawa 💗</em></p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="blowCandle()">¡Sopla la vela! 🌬️</button>
+            <button class="btn" onclick="openGallery()">Ver fotos 📷</button>
+            <button class="btn" onclick="launchFireworks()">Fuegos artificiales 🎆</button>
+            <button class="btn" onclick="surpriseMe()">Sorpréndeme ✨</button>
+        </div>
+    </div>
+    
+    <!-- Galería de fotos -->
+    <div class="photo-gallery" id="photoGallery">
+        <button class="gallery-close" onclick="closeGallery()">×</button>
+        <div class="gallery-content">
+            <h2 style="color: #FF69B4; text-align: center; margin-bottom: 30px; font-size: 2rem;">Nuestros momentos especiales 💕</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Las fotos se cargarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver imagen completa -->
+    <div class="photo-modal" id="photoModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let musicPlaying = false;
+        let fireworksActive = false;
+        let candleBlown = false;
+        
+        // Mensajes de amor
+        const loveMessages = [
+            "¡Eres la mujer mas perfecta de toda la existencia mi niña ♡! 👑",
+            "¡Tu lindo gatito negro ti ama infinitamente! 🐱💕",
+            "¡Eres mi princesa hermosa y perfecta! ✨",
+            "¡MUAH MUAH MUAH MUAH MUAH MUAH MUAH ♡! 🥰",
+            "¡Te amo más que a nada en este mundo! 💗",
+            "¡Eres mi sol, mi luna y todas mis estrellas! 🌟",
+            "¡Mi corazón late solo por ti! 💖"
+        ];
+
+        // Datos de las fotos con URLs reales
+        const photos = [
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/1.jpg',
+                caption: 'Tu dulce mensaje de amor ❤️',
+                alt: 'Foto 1'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/2.jpg',
+                caption: 'Esa sonrisa que me enamora cada día 😊',
+                alt: 'Foto 2'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/3.jpg',
+                caption: 'El pastel más tierno para ti 🎂',
+                alt: 'Foto 3'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/4.jpg',
+                caption: 'Relajándote como una princesa 👸',
+                alt: 'Foto 4'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/5.jpg',
+                caption: 'Mi bebé hermosa descansando 😴',
+                alt: 'Foto 5'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/6.jpg',
+                caption: 'Todo mi amor para ti 💕',
+                alt: 'Foto 6'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/9.jpg',
+                caption: 'Nuestros momentos más preciados 💝',
+                alt: 'Foto 7'
+            },
+            { 
+                src: 'https://github.com/Zombie2525/Proyecto-My-Wawa-/raw/main/8.jpg',
+                caption: 'Mi vampi hermosa y pechosa - es el chupete por el cual todo empezo jsjsjs Te amo 🧛‍♀️💕',
+                alt: 'Foto 8'
+            }
+        ];
+        
+        // Función para reproducir sonidos
+        function playSound() {
+            try {
+                const context = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = context.createOscillator();
+                const gainNode = context.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(context.destination);
+                
+                oscillator.frequency.setValueAtTime(800, context.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(200, context.currentTime + 0.5);
+                
+                gainNode.gain.setValueAtTime(0.1, context.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 0.5);
+                
+                oscillator.start(context.currentTime);
+                oscillator.stop(context.currentTime + 0.5);
+            } catch(e) {
+                console.log('Audio no disponible');
+            }
+        }
+        
+        // Crear partículas de fondo mejoradas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 25;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 8) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Crear corazones flotantes
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                const heartEmojis = ['💗', '💕', '💖', '💝', '💓'];
+                heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (10 + Math.random() * 5) + 's';
+                heart.style.fontSize = (16 + Math.random() * 8) + 'px';
+                heartsContainer.appendChild(heart);
+                
+                setTimeout(() => {
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                }, 15000);
+            }, 2500);
+        }
+        
+        // Función para soplar la vela (CORREGIDA)
+        function blowCandle() {
+            if (candleBlown) return; // Evitar múltiples ejecuciones
+            
+            candleBlown = true;
+            const flame = document.getElementById('flame');
+            playSound();
+            
+            // Apagar la vela suavemente
+            flame.style.transition = 'all 1s ease-out';
+            flame.style.opacity = '0';
+            flame.style.transform = 'translateX(-50%) scale(0) rotate(45deg)';
+            
+            // Crear efectos sin parpadeos
+            setTimeout(() => {
+                createMiniFireworks();
+                showFloatingMessage("¡Pediste un deseo muy especial! ✨");
+            }, 500);
+            
+            // Reencender la vela después de 5 segundos
+            setTimeout(() => {
+                flame.style.opacity = '1';
+                flame.style.transform = 'translateX(-50%) scale(1) rotate(0deg)';
+                candleBlown = false;
+            }, 5000);
+        }
+        
+        // Click en el pastel (CORREGIDO)
+        function cakeClick() {
+            if (candleBlown) return;
+            
+            playSound();
+            showFloatingMessage("¡El pastel te manda besitos de parte de tu gatito hermoso! 😘");
+            createRainbowHearts();
+        }
+        
+        // Crear mini fuegos artificiales (CORREGIDO)
+        function createMiniFireworks() {
+            const container = document.getElementById('fireworks');
+            const colors = ['#FF69B4', '#FFB6C1', '#FF1493', '#FFC0CB', '#FF20B2', '#DA70D6', '#FFD700', '#FF4500'];
+            
+            // Crear múltiples explosiones sin parpadeos
+            for (let explosion = 0; explosion < 3; explosion++) {
+                setTimeout(() => {
+                    // Crear fuegos artificiales
+                    for (let i = 0; i < 20; i++) {
+                        const firework = document.createElement('div');
+                        firework.classList.add('firework');
+                        firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        firework.style.left = (30 + Math.random() * 40) + '%';
+                        firework.style.top = (30 + Math.random() * 40) + '%';
+                        firework.style.animationDelay = Math.random() * 0.3 + 's';
+                        firework.style.boxShadow = `0 0 20px ${firework.style.backgroundColor}`;
+                        container.appendChild(firework);
+                        
+                        setTimeout(() => {
+                            if (firework.parentNode) {
+                                firework.parentNode.removeChild(firework);
+                            }
+                        }, 2000);
+                    }
+                }, explosion * 800);
+            }
+        }
+        
+        // Mostrar mensaje flotante (MEJORADO)
+        function showFloatingMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('floating-message');
+            messageElement.textContent = message;
+            messageElement.style.left = Math.max(10, Math.min(70, Math.random() * 60)) + '%';
+            messageElement.style.top = Math.max(20, Math.min(60, Math.random() * 40)) + '%';
+            
+            document.body.appendChild(messageElement);
+            
+            setTimeout(() => {
+                if (messageElement.parentNode) {
+                    messageElement.parentNode.removeChild(messageElement);
+                }
+            }, 4000);
+        }
+        
+        // Control de música (ACTUALIZADO con ondas)
+        function toggleMusic() {
+            const musicBtn = document.getElementById('musicBtn');
+            const audio = document.getElementById('musicAudio');
+            const musicWaves = document.getElementById('musicWaves');
+            
+            if (musicPlaying) {
+                try {
+                    audio.pause();
+                    musicBtn.textContent = '🎵';
+                    musicPlaying = false;
+                    musicWaves.classList.remove('active');
+                    showFloatingMessage("Música pausada 🎵");
+                    stopMusicEffects();
+                } catch(e) {
+                    console.log('Error al pausar música');
+                }
+            } else {
+                try {
+                    audio.play().then(() => {
+                        musicBtn.textContent = '🎶';
+                        musicPlaying = true;
+                        musicWaves.classList.add('active');
+                        showFloatingMessage("🎵 'We fell in love in october' - Nuestra canción ♡ 🎵");
+                        startMusicEffects();
+                    }).catch((e) => {
+                        console.log('Error al reproducir música:', e);
+                        // Fallback a efectos visuales si no se puede reproducir
+                        musicBtn.textContent = '🎶';
+                        musicPlaying = true;
+                        musicWaves.classList.add('active');
+                        showFloatingMessage("🎵 Música en tu corazón (Click requerido para audio) 🎵");
+                        startMusicEffects();
+                        
+                        // Auto-pausa después de 3 minutos si es solo visual
+                        setTimeout(() => {
+                            if (musicPlaying) {
+                                musicBtn.textContent = '🎵';
+                                musicPlaying = false;
+                                musicWaves.classList.remove('active');
+                                stopMusicEffects();
+                            }
+                        }, 180000);
+                    });
+                } catch(e) {
+                    console.log('Error al inicializar música');
+                    showFloatingMessage("🎵 Música en tu corazón 🎵");
+                }
+            }
+        }
+        
+        // Efectos visuales de música
+        function startMusicEffects() {
+            const musicInterval = setInterval(() => {
+                if (!musicPlaying) {
+                    clearInterval(musicInterval);
+                    return;
+                }
+                
+                // Crear ondas musicales
+                createMusicWaves();
+                
+                // Mensajes románticos cada 30 segundos
+                if (Math.random() < 0.1) {
+                    const musicMessages = [
+                        "🎵 Esta canción me recuerda a ti 🎵",
+                        "🎶 Bailando en mi corazón 🎶",
+                        "💕 Girl in red para mi girl in pink 💕"
+                    ];
+                    showFloatingMessage(musicMessages[Math.floor(Math.random() * musicMessages.length)]);
+                }
+            }, 3000);
+        }
+        
+        // Detener efectos de música
+        function stopMusicEffects() {
+            // Los intervalos se limpian automáticamente cuando musicPlaying = false
+        }
+        
+        // Crear ondas musicales visuales
+        function createMusicWaves() {
+            const container = document.getElementById('hearts');
+            
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const wave = document.createElement('div');
+                    wave.innerHTML = '🎵';
+                    wave.style.position = 'absolute';
+                    wave.style.left = (20 + Math.random() * 60) + '%';
+                    wave.style.top = (20 + Math.random() * 60) + '%';
+                    wave.style.fontSize = '18px';
+                    wave.style.color = '#FF69B4';
+                    wave.style.animation = 'heartFloat 6s ease-out forwards';
+                    wave.style.zIndex = '50';
+                    
+                    container.appendChild(wave);
+                    
+                    setTimeout(() => {
+                        if (wave.parentNode) {
+                            wave.parentNode.removeChild(wave);
+                        }
+                    }, 6000);
+                }, i * 1000);
+            }
+        }
+        
+        // Abrir galería de fotos (ACTUALIZADO con imágenes reales)
+        function openGallery() {
+            const gallery = document.getElementById('photoGallery');
+            const galleryGrid = document.getElementById('galleryGrid');
+            
+            // Limpiar contenido previo
+            galleryGrid.innerHTML = '';
+            
+            // Crear las fotos con imágenes reales
+            photos.forEach((photo, index) => {
+                const photoItem = document.createElement('div');
+                photoItem.classList.add('photo-item');
+                photoItem.innerHTML = `
+                    <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
+                    <div class="photo-caption">${photo.caption}</div>
+                `;
+                photoItem.onclick = () => showPhotoModal(photo, index);
+                galleryGrid.appendChild(photoItem);
+            });
+            
+            // Mostrar galería
+            gallery.style.display = 'block';
+            playSound();
+            showFloatingMessage("¡Nuestros recuerdos más hermosos! 📸💕");
+        }
+        
+        // Cerrar galería (CORREGIDO)
+        function closeGallery() {
+            const gallery = document.getElementById('photoGallery');
+            gallery.style.display = 'none';
+            showFloatingMessage("¡Gracias por ver nuestros momentos especiales! 💕");
+        }
+        
+        // Mostrar foto en modal (MEJORADO)
+        function showPhotoModal(photo, index) {
+            const modal = document.getElementById('photoModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modalImage.src = photo.src;
+            modalImage.alt = photo.alt;
+            modalCaption.textContent = photo.caption;
+            modal.style.display = 'block';
+            
+            const romanticMessages = [
+                `¡Una de nuestras memorias más preciadas! 💕`,
+                `¡Esta foto me hace sonreír cada vez que la veo! 😊`,
+                `¡Momento perfecto capturado para la eternidad! ✨`,
+                `¡Mi corazón se acelera al recordar este momento! 💖`
+            ];
+            
+            const message = romanticMessages[index % romanticMessages.length];
+            showFloatingMessage(message);
+            createRainbowHearts();
+        }
+
+        // Cerrar modal
+        function closeModal() {
+            const modal = document.getElementById('photoModal');
+            modal.style.display = 'none';
+        }
+        
+        // Lanzar fuegos artificiales grandes (CORREGIDO)
+        function launchFireworks() {
+            if (fireworksActive) return;
+            
+            fireworksActive = true;
+            playSound();
+            
+            const container = document.getElementById('fireworks');
+            const colors = ['#FF69B4', '#FFB6C1', '#FF1493', '#FFC0CB', '#FF20B2', '#DA70D6', '#FFD700', '#FF4500', '#32CD32', '#00CED1'];
+            
+            // Crear múltiples series de fuegos artificiales
+            for (let series = 0; series < 5; series++) {
+                setTimeout(() => {
+                    // Crear explosión grande
+                    for (let i = 0; i < 40; i++) {
+                        const firework = document.createElement('div');
+                        firework.classList.add('firework');
+                        firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        firework.style.left = (10 + Math.random() * 80) + '%';
+                        firework.style.top = (10 + Math.random() * 80) + '%';
+                        firework.style.animationDelay = Math.random() * 0.5 + 's';
+                        firework.style.boxShadow = `0 0 30px ${firework.style.backgroundColor}`;
+                        firework.style.width = '6px';
+                        firework.style.height = '6px';
+                        
+                        container.appendChild(firework);
+                        
+                        setTimeout(() => {
+                            if (firework.parentNode) {
+                                firework.parentNode.removeChild(firework);
+                            }
+                        }, 2500);
+                    }
+                    
+                    // Mensaje especial para cada serie
+                    const fireworkMessages = [
+                        "¡Fuegos artificiales de amor para ti! 🎆",
+                        "¡Iluminando el cielo como tú iluminas mi vida! ✨",
+                        "¡Cada destello es un te amo! 💖",
+                        "¡Celebrando a mi princesa hermosa! 👑",
+                        "¡Gran finale para mi gran amor! 🎇"
+                    ];
+                    
+                    showFloatingMessage(fireworkMessages[series]);
+                }, series * 1500);
+            }
+            
+            // Resetear después de todos los fuegos artificiales
+            setTimeout(() => {
+                fireworksActive = false;
+            }, 8000);
+        }
+        
+        // Función sorpréndeme (MEJORADA)
+        function surpriseMe() {
+            playSound();
+            
+            const surprises = [
+                () => {
+                    showFloatingMessage("¡Eres la mujer mas perfecta de toda la existencia mi niña ♡! 👑");
+                    createRainbowHearts();
+                },
+                () => {
+                    showFloatingMessage("¡Tu lindo gatito negro ti ama infinitamente! 🐱💕");
+                    createSpecialEffect();
+                },
+                () => {
+                    showFloatingMessage("¡Eres mi princesa hermosa y perfecta! ✨");
+                    launchFireworks();
+                },
+                () => {
+                    showFloatingMessage("¡MUAH MUAH MUAH MUAH MUAH MUAH MUAH ♡! 🥰");
+                    createConfetti();
+                },
+                () => {
+                    showFloatingMessage("¡Te amo más que a las estrellas en el cielo! 🌟");
+                    createMagicSparkles();
+                }
+            ];
+            
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            randomSurprise();
+        }
+        
+        // Crear lluvia de corazones arcoíris (MEJORADO)
+        function createRainbowHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const heartTypes = ['💗', '💕', '💖', '💝', '💓', '💘', '💞'];
+            
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+                    heart.style.fontSize = (18 + Math.random() * 12) + 'px';
+                    heartsContainer.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) {
+                            heart.parentNode.removeChild(heart);
+                        }
+                    }, 7000);
+                }, i * 120);
+            }
+        }
+        
+        // Crear efecto especial (MEJORADO)
+        function createSpecialEffect() {
+            const body = document.body;
+            body.style.animation = 'bodyPulse 1.5s ease-in-out 4';
+            
+            // Crear ondas de amor
+            createLoveWaves();
+        }
+        
+        // Crear ondas de amor
+        function createLoveWaves() {
+            const container = document.getElementById('hearts');
+            const loveEmojis = ['💕', '🥰', '😘', '💋', '🌟'];
+            
+            for (let wave = 0; wave < 3; wave++) {
+                setTimeout(() => {
+                    for (let i = 0; i < 8; i++) {
+                        const loveElement = document.createElement('div');
+                        loveElement.innerHTML = loveEmojis[Math.floor(Math.random() * loveEmojis.length)];
+                        loveElement.style.position = 'absolute';
+                        loveElement.style.left = (i * 12) + '%';
+                        loveElement.style.top = '50%';
+                        loveElement.style.fontSize = '24px';
+                        loveElement.style.animation = 'heartFloat 4s ease-out forwards';
+                        loveElement.style.animationDelay = (i * 0.2) + 's';
+                        
+                        container.appendChild(loveElement);
+                        
+                        setTimeout(() => {
+                            if (loveElement.parentNode) {
+                                loveElement.parentNode.removeChild(loveElement);
+                            }
+                        }, 5000);
+                    }
+                }, wave * 1000);
+            }
+        }
+        
+        // Crear confeti (MEJORADO)
+        function createConfetti() {
+            const container = document.createElement('div');
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.pointerEvents = 'none';
+            container.style.zIndex = '300';
+            
+            const colors = ['#FF69B4', '#FFB6C1', '#FF1493', '#FFC0CB', '#FFD700', '#32CD32', '#00CED1', '#FF4500'];
+            const shapes = ['●', '■', '▲', '★'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.fontSize = (8 + Math.random() * 8) + 'px';
+                confetti.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-20px';
+                confetti.style.animation = `confettiFall ${4 + Math.random() * 3}s ease-out forwards`;
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                
+                container.appendChild(confetti);
+            }
+            
+            document.body.appendChild(container);
+            
+            setTimeout(() => {
+                if (container.parentNode) {
+                    container.parentNode.removeChild(container);
+                }
+            }, 8000);
+        }
+        
+        // Crear chispas mágicas
+        function createMagicSparkles() {
+            const container = document.getElementById('hearts');
+            
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.innerHTML = '✨';
+                    sparkle.style.position = 'absolute';
+                    sparkle.style.left = Math.random() * 100 + '%';
+                    sparkle.style.top = Math.random() * 100 + '%';
+                    sparkle.style.fontSize = (16 + Math.random() * 8) + 'px';
+                    sparkle.style.animation = 'heartFloat 5s ease-out forwards';
+                    sparkle.style.zIndex = '100';
+                    
+                    container.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        if (sparkle.parentNode) {
+                            sparkle.parentNode.removeChild(sparkle);
+                        }
+                    }, 5000);
+                }, i * 200);
+            }
+        }
+        
+        // Cerrar modal con click fuera de la imagen
+        document.getElementById('photoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Cerrar modal con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('photoModal');
+                if (modal.style.display === 'block') {
+                    closeModal();
+                }
+            }
+        });
+        
+        // Inicializar efectos al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            createHearts();
+            
+            // Configurar audio events
+            const audio = document.getElementById('musicAudio');
+            const musicBtn = document.getElementById('musicBtn');
+            const musicWaves = document.getElementById('musicWaves');
+            
+            audio.addEventListener('ended', () => {
+                musicBtn.textContent = '🎵';
+                musicPlaying = false;
+                musicWaves.classList.remove('active');
+                stopMusicEffects();
+                showFloatingMessage("🎵 Canción terminada - ¡Fue hermosa como tú! 🎵");
+            });
+            
+            audio.addEventListener('error', (e) => {
+                console.log('Error al cargar audio:', e);
+                musicWaves.classList.remove('active');
+                showFloatingMessage("🎵 Audio no disponible, pero la música está en nuestros corazones 🎵");
+            });
+            
+            // Mensaje de bienvenida
+            setTimeout(() => {
+                showFloatingMessage("¡Para mi wawa, Mi vampi hermosa y pechosa, Mi niña consentida ♡! 💕");
+            }, 2000);
+            
+            // Segundo mensaje
+            setTimeout(() => {
+                showFloatingMessage("¡Feliz cumpleaños mi amor! 🎂✨");
+            }, 5000);
+            
+            // Efectos automáticos cada cierto tiempo
+            setInterval(() => {
+                if (Math.random() < 0.2) {
+                    const randomMessages = [
+                        "Te amo infinitamente 💗",
+                        "Eres perfecta mi niña 🌟",
+                        "Mi corazón es tuyo 💖",
+                        "Tu gatito te ama mucho 🐱💕"
+                    ];
+                    const randomMsg = randomMessages[Math.floor(Math.random() * randomMessages.length)];
+                    showFloatingMessage(randomMsg);
+                }
+            }, 20000); // Cada 20 segundos
+        });
+        
+        // Easter egg: efectos especiales con teclas
+        document.addEventListener('keydown', (e) => {
+            switch(e.key.toLowerCase()) {
+                case 'l':
+                    showFloatingMessage("¡Love you My Baby ♡! 💕");
+                    createRainbowHearts();
+                    break;
+                case 'h':
+                    showFloatingMessage("¡MUAH MUAH MUAH TI AMOOOOO! 🎉");
+                    if (!fireworksActive) launchFireworks();
+                    break;
+                case 'k':
+                    showFloatingMessage("¡Muah Muah Muah muchos besitos para mi bb! 😽");
+                    createSpecialEffect();
+                    break;
+                case 'm':
+                    toggleMusic();
+                    break;
+            }
+        });
+        
+        // Prevenir scroll durante efectos especiales
+        let preventScroll = false;
+        
+        document.addEventListener('wheel', (e) => {
+            if (preventScroll) {
+                e.preventDefault();
+            }
+        });
+        
+        // Limpiar elementos antiguos periódicamente para evitar acumulación
+        setInterval(() => {
+            const hearts = document.querySelectorAll('.heart');
+            const messages = document.querySelectorAll('.floating-message');
+            const fireworks = document.querySelectorAll('.firework');
+            
+            // Limpiar elementos que deberían haber desaparecido
+            hearts.forEach(heart => {
+                if (heart.style.opacity === '0') {
+                    heart.remove();
+                }
+            });
+            
+            messages.forEach(msg => {
+                if (msg.style.opacity === '0') {
+                    msg.remove();
+                }
+            });
+            
+            fireworks.forEach(firework => {
+                if (firework.style.opacity === '0') {
+                    firework.remove();
+                }
+            });
+        }, 30000); // Cada 30 segundos
+    </script>
+</body>
+</html>
