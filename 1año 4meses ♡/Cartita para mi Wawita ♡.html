@@ -9,9 +9,236 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: white; 
+      background-color: #000000; 
       overflow-x: hidden;
+      position: relative;
     }
+    
+    /* Efectos de fondo */
+    .bg-effects {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.5;
+      animation: float 15s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: radial-gradient(circle, #FF69B4, transparent);
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    
+    .star {
+      position: absolute;
+      color: #FFD700;
+      font-size: 12px;
+      opacity: 0.7;
+      animation: sparkle 4s infinite ease-in-out;
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 0.9; transform: scale(1.2); }
+    }
+    
+    .music-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF1493, #C71585);
+      border: 2px solid #FF69B4;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .music-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+    }
+    
+    .music-toggle-icon {
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+    
+    .music-toggle.open .music-toggle-icon {
+      transform: rotate(180deg);
+    }
+    
+    .music-panel {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      border-radius: 20px;
+      border: 2px solid #FF69B4;
+      box-shadow: 0 8px 30px rgba(255, 105, 180, 0.4);
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      animation: slideIn 0.3s ease;
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .music-panel.show {
+      display: flex;
+    }
+    
+    .volume-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    
+    .volume-slider {
+      width: 120px;
+      height: 8px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: linear-gradient(to right, #ff69b4, #C71585, #FF1493);
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+	  box-shadow: 0 0 8px rgba(255, 20, 147, 0.6), 0 0 16px rgba(199, 21, 133, 0.4);
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle, #ffb6c1, #ff1493);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 8px #ff1493,
+	  0 0 8px rgba(255, 20, 147, 0.8);
+    }
+    
+    .volume-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle, #ffb6c1, #ff1493);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 8px #ff1493,
+	  0 0 15px rgba(255, 20, 147, 0.8);
+    }
+    
+    .volume-icon {
+      color: #FF69B4;
+      font-size: 22px;
+    }
+    
+    .volume-label {
+      color: #FF69B4;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    .music-btn {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #FF1493, #C71585);
+      border: 3px solid #FF69B4;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(255, 20, 147, 0.6), 0 0 50px rgba(199, 21, 133, 0.3);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 25px rgba(255, 20, 147, 0.6), 0 0 50px rgba(199, 21, 133, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 35px rgba(255, 20, 147, 0.8), 0 0 70px rgba(199, 21, 133, 0.4);
+      }
+    }
+    
+    .music-btn:hover {
+      transform: scale(1.15);
+    }
+    
+    .music-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .music-btn.playing {
+      background: radial-gradient(circle at 30% 30%, #9C27B0, #6A1B9A);
+      border-color: #BA68C8;
+      box-shadow: 0 0 25px rgba(156, 39, 176, 0.6), 0 0 50px rgba(106, 27, 154, 0.3);
+    }
+    
+    .music-icon {
+      font-size: 28px;
+      color: white;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+    
     .screen {
       display: none;
       justify-content: center;
@@ -19,10 +246,21 @@
       height: 100vh;
       text-align: center;
       flex-direction: column;
+      background-color: #000000;
+      position: relative;
+      z-index: 1;
     }
+    
+    #passwordScreen h2 {
+      color: #FF69B4;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+    }
+    
     .active {
       display: flex;
     }
+    
     .keypad {
       display: grid;
       grid-template-columns: repeat(3, 60px);
@@ -30,25 +268,37 @@
       margin-top: 20px;
       justify-content: center;
     }
+    
     .key {
-      background-color: white;
-      border: 2px solid #ccc;
+      background: linear-gradient(145deg, #6A1B9A, #4A148C);
+      border: 2px solid #8E24AA;
       border-radius: 10px;
       font-size: 20px;
       padding: 15px;
       cursor: pointer;
       transition: all 0.2s ease;
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 4px 4px 8px rgba(139, 20, 140, 0.4);
+      color: #A52A2A;
+      font-weight: bold;
     }
+    
     .key:hover {
-      background-color: #f0f0f0;
+      background: linear-gradient(145deg, #B22222, #A52A2A);
       transform: translateY(-3px);
+      box-shadow: 4px 4px 12px rgba(178, 34, 34, 0.6);
     }
+    
     .input-display {
       font-size: 24px;
       margin-top: 20px;
       letter-spacing: 8px;
+      color: #FFFFFF;
+      background-color: #4A148C;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: bold;
     }
+    
     .notepad {
       background-color: #ffffff;
       border: 3px solid #000000;
@@ -59,17 +309,21 @@
       text-align: left;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       line-height: 1.6;
-      box-shadow: 8px 8px 15px rgba(0,0,0,0.2);
+      box-shadow: 8px 8px 15px rgba(0,0,0,0.3);
       position: relative;
+      z-index: 2;
     }
+    
     .notepad h3 {
       margin-top: 0;
     }
+    
     .btn-container {
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
     }
+    
     .btn {
       background-color: white;
       border: none;
@@ -80,28 +334,99 @@
       box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
       transition: all 0.2s ease;
     }
+    
     .btn:hover {
       background-color: #ded8d8;
       transform: translateY(-2px);
     }
+    
     .img-page {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 15px;
     }
+    
     .img-page img {
       width: 100%;
       max-width: 400px;
       border-radius: 15px;
       box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
     }
+    
+    .carousel {
+      position: relative;
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      width: 100%;
+    }
+    
+    .carousel-track img {
+      width: 100%;
+      border-radius: 15px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 50%;
+    }
+    
+    .carousel-btn:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
   </style>
 </head>
 <body>
+<!-- Efectos de fondo -->
+<div class="bg-effects" id="bgEffects"></div>
+
+<!-- Botón toggle de música (arriba a la derecha) -->
+<div class="music-toggle" id="musicToggle" onclick="togglePanel()">
+  <span class="music-toggle-icon">🎵</span>
+</div>
+
+<!-- Panel de controles de música -->
+<div class="music-panel" id="musicPanel">
+  <div class="volume-control">
+    <span class="volume-icon">🔊</span>
+    <input type="range" min="0" max="100" value="30" class="volume-slider" id="volumeSlider" orient="vertical">
+    <span class="volume-label" id="volumeLabel">30%</span>
+  </div>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    <span class="music-icon" id="musicIcon">▶️</span>
+  </button>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="https://raw.githubusercontent.com/Zombie2525/Proyecto-My-Wawa-/refs/heads/main/1a%C3%B1o%204meses%20%E2%99%A1/Illegal%20(Dimple-Tus%20hoyuelitos%20%E2%99%A1)%20BTS%20%E2%99%A1.mp3" type="audio/mpeg">
+</audio>
+
 <!-- Pantalla de contraseña -->
 <div id="passwordScreen" class="screen active">
-  <h2>🔒 Ingresa la contraseña</h2>
+  <h2>🔒 Ingresa la contraseña baby ^^</h2>
+  <h2>Pista: Año de???  -Tu Cum😉 </h2>
   <div class="input-display" id="inputDisplay">••••</div>
   <div class="keypad">
     <button class="key" onclick="enterDigit('1')">1</button>
@@ -118,6 +443,7 @@
     <button class="key" onclick="deleteLast()">⌫</button>
   </div>
 </div>
+
 <div id="notepadScreen" class="screen">
   <div class="notepad" id="page1">
     <h2> TU GATITO ^^ </h2>
@@ -133,21 +459,21 @@
     <h3>📅 13 Enero 2026</h3>
     <h4>💌 Mi Querido Wawita ♡</h4>
     <p>Desde que llegaste a mi vida, todo cambió de una manera que no puedo explicar con palabras. Es como si cada día tuviera un nuevo brillo, como si el mundo hubiera decidido volverse más bonito solo porque tú existes en mi mundo ♡.</p>
-    <p>Tu sonrisa se ha vuelto mi motivo favorito, y tus palabras, mi refugio. No hay momento en el que no piense en ti, en lo mucho que me haces sentir y en lo afortunado que soy por tenerte en mi vida wawa 💕.
-<p>A veces me quedo en silencio solo para escucharte, para mirarte y darme cuenta de que, en medio de todo, encontré a alguien que realmente vale la pena y eso es dificil en esta generacion tan superficial y sin corazon. 
-<p>En ti encontre perfeccion, un corazon noble, amable, sentimental, confiable y algo muy muy hermoso. Tu corazon, Un corazon lindo y hermoso. Aun si tiene grietas y heridas sigue siendo igual de hermoso y perfecto como lo son las estrellas y aun mas hermoso que la nebuloza corazon y estrella ❤✨.</p>
-    <p>Te amo no solo por quién eres, sino por lo que soy cuando estoy contigo. Porque contigo aprendí que amar no es solo decirlo, sino demostrarlo con cada detalle, con cada mirada, con cada gesto, en cada dia y en cada momento que pasamos juntos y separados.
-Y te prometo que cada día haré lo posible por seguir mereciendo tu amor. Por seguir enamorandote dia a dia aunque abra dia que sean dificiles y yo los complique mas, Pero incluso en todos los dais malos y peores seguire estando para ti, a tu lado, junto a tu corazon y tus manos ♡.</p>
-<p>Gracias por existir mi amada y pequela wawa, Ireri te amo mushsisimo mas de lo que aveces digo y lo puedes notar por como te miro dia a dia ✨, por ser tú, por hacerme sentir que el amor verdadero no es un sueño, sino una realidad que vive en tus abrazos.</p>
-<p>Con todo mi corazón para mi pequeña Ireri 💞💕</p>
-<p>Tu gatito negro Ti amaaaaaaaaaaaaaaaaaaaa 💕✨</p>
+    <p>Tu sonrisa se ha vuelto mi motivo favorito, y tus palabras, mi refugio. No hay momento en el que no piense en ti, en lo mucho que me haces sentir y en lo afortunado que soy por tenerte en mi vida wawa 💕.</p>
+    <p>A veces me quedo en silencio solo para escucharte, para mirarte y darme cuenta de que, en medio de todo, encontré a alguien que realmente vale la pena y eso es dificil en esta generacion tan superficial y sin corazon.</p>
+    <p>En ti encontre perfeccion, un corazon noble, amable, sentimental, confiable y algo muy muy hermoso. Tu corazon, Un corazon lindo y hermoso. Aun si tiene grietas y heridas sigue siendo igual de hermoso y perfecto como lo son las estrellas y aun mas hermoso que la nebuloza corazon y estrella ❤✨.</p>
+    <p>Te amo no solo por quién eres, sino por lo que soy cuando estoy contigo. Porque contigo aprendí que amar no es solo decirlo, sino demostrarlo con cada detalle, con cada mirada, con cada gesto, en cada dia y en cada momento que pasamos juntos y separados. Y te prometo que cada día haré lo posible por seguir mereciendo tu amor. Por seguir enamorandote dia a dia aunque abra dia que sean dificiles y yo los complique mas, Pero incluso en todos los dais malos y peores seguire estando para ti, a tu lado, junto a tu corazon y tus manos ♡.</p>
+    <p>Gracias por existir mi amada y pequela wawa, Ireri te amo mushsisimo mas de lo que aveces digo y lo puedes notar por como te miro dia a dia ✨, por ser tú, por hacerme sentir que el amor verdadero no es un sueño, sino una realidad que vive en tus abrazos.</p>
+    <p>Con todo mi corazón para mi pequeña Ireri 💞💕</p>
+    <p>Tu gatito negro Ti amaaaaaaaaaaaaaaaaaaaa 💕✨</p>
     <div class="btn-container">
       <button class="btn" onclick="goBack()">⬅ Inicio</button>
       <button class="btn" onclick="nextPage(2)">➡ Siguiente</button>
     </div>
   </div>
+  
   <div class="notepad" id="page2" style="display:none; text-align:center;">
-    <img src="https://n9.cl/uw1f1q" alt="Foto especial" style="width:90%; max-width:350px; border-radius:15px; box-shadow:4px 4px 10px rgba(0,0,0,0.2); margin-bottom:15px;">
+    <img src="https://i.pinimg.com/1200x/4f/73/05/4f730595c3cb7d95e947a5721713bc40.jpg" alt="Foto especial" style="width:90%; max-width:350px; border-radius:15px; box-shadow:4px 4px 10px rgba(0,0,0,0.2); margin-bottom:15px;">
     <p style="text-align:justify;">
       Desde que llegaste a mi vida, todo cambió para bien; encontré en ti la paz que siempre busqué y la alegría que creí perdida. Me haces sentir completo, amado y capaz de todo. Cada mirada tuya me recuerda por qué vale la pena cada día, y cada palabra tuya me da fuerzas para seguir. No necesito prometerte el mundo, solo quiero darte mi amor sincero, mi apoyo incondicional y mi deseo de compartir contigo cada instante de esta vida y las siguientes volvere a encontrarte.
     </p>
@@ -156,91 +482,92 @@ Y te prometo que cada día haré lo posible por seguir mereciendo tu amor. Por s
       <button class="btn" onclick="nextPage(3)">➡ Siguiente</button>
     </div>
   </div>
-<div class="notepad" id="page3" style="display:none; text-align:center;">
-  <h4>📸 Nuestros recuerdos💞 
-  <p>(De tu serie pero son vivencias que hemos pasado juntos tambien♥) </h4>
-  <div class="carousel">
-    <div class="carousel-track" id="carouselTrack">
-      <img src="https://n9.cl/o11vrd" alt="Recuerdo 1">
-      <img src="https://n9.cl/bf87g" alt="Recuerdo 2">
-      <img src="https://n9.cl/ntjycw" alt="Recuerdo 3">
-      <img src="https://n9.cl/ce2j0" alt="Recuerdo 4">
+  
+  <div class="notepad" id="page3" style="display:none; text-align:center;">
+    <h4>📸 Nuestros recuerdos💞</h4>
+    <p>(De tu serie pero son vivencias que hemos pasado juntos tambien♥)</p>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="https://raw.githubusercontent.com/Zombie2525/Proyecto-My-Wawa-/main/1año%204meses%20♡/Abasho%20♡.png" alt="Abashito">
+        <img src="https://raw.githubusercontent.com/Zombie2525/Proyecto-My-Wawa-/main/1año%204meses%20♡/Maruchan%20jsjs.jpg" alt="Sonriendojsjs">
+        <img src="https://raw.githubusercontent.com/Zombie2525/Proyecto-My-Wawa-/main/1año%204meses%20♡/mm....jpg" alt="Ñam Ñam...">
+        <img src="https://raw.githubusercontent.com/Zombie2525/Proyecto-My-Wawa-/main/1año%204meses%20♡/Muah%20.jpg" alt="Muah 😽">
+        <img src="https://i.pinimg.com/736x/ce/95/47/ce95473aa21f920ab4d4d67b1532d6f5.jpg" alt="Recuerdo Serie de mi bb 5">
+        <img src="https://i.pinimg.com/736x/48/ef/96/48ef96ba8c561e23f84c0ae1dcce224e.jpg" alt="Recuerdo serie 6">
+        <img src="https://i.pinimg.com/736x/d5/a6/47/d5a6470b76f9b527cdc2cce35462a588.jpg" alt="Recuerdo serie 7">
+        <img src="https://i.pinimg.com/736x/2e/b5/43/2eb5437e92b1b04febd79107996bf026.jpg" alt="Recuerdo serie 8">
+      </div>
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
-  <div class="btn-container">
-    <button class="btn" onclick="prevPage(2)">⬅ Anterior</button>
-    <button class="btn" onclick="goBack()">⬅ Inicio</button>
+    <div class="btn-container">
+      <button class="btn" onclick="prevPage(2)">⬅ Anterior</button>
+      <button class="btn" onclick="goBack()">⬅ Inicio</button>
+    </div>
   </div>
 </div>
-<style>
-.carousel {
-  position: relative;
-  width: 90%;
-  max-width: 500px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.carousel-track {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-}
-.carousel-track img {
-  width: 100%;
-  border-radius: 15px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 50%;
-}
-.carousel-btn:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-</style>
+
 <script>
-let currentSlide = 0;
-function moveSlide(direction) {
-  const track = document.getElementById('carouselTrack');
-  const slides = track.children.length;
-  currentSlide += direction;
-  if (currentSlide < 0) currentSlide = slides - 1;
-  if (currentSlide >= slides) currentSlide = 0;
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-</script>
-</div>
-<script>
+  // Crear efectos de fondo
+  function createBackgroundEffects() {
+    const bgEffects = document.getElementById('bgEffects');
+    
+    // Crear corazones flotantes
+    for (let i = 0; i < 12; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = ['💕', '💖', '💗', '💝', '❤️', '🌸'][Math.floor(Math.random() * 6)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+      heart.style.animationDelay = Math.random() * 15 + 's';
+      heart.style.animationDuration = (Math.random() * 10 + 12) + 's';
+      bgEffects.appendChild(heart);
+    }
+    
+    // Crear estrellas brillantes
+    for (let i = 0; i < 30; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.textContent = '✨';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 4 + 's';
+      bgEffects.appendChild(star);
+    }
+    
+    // Crear partículas brillantes
+    for (let i = 0; i < 40; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 3 + 's';
+      bgEffects.appendChild(particle);
+    }
+  }
+  
+  // Inicializar efectos al cargar
+  window.addEventListener('load', createBackgroundEffects);
+  
   const correctPassword = '2009';
   let input = '';
+  
   function enterDigit(digit) {
     if (input.length < 4) {
       input += digit;
       updateDisplay();
     }
   }
+  
   function deleteLast() {
     input = input.slice(0, -1);
     updateDisplay();
   }
+  
   function updateDisplay() {
     document.getElementById('inputDisplay').textContent = input.padEnd(4, '•');
   }
+  
   function checkPassword() {
     if (input.length === 4) {
       if (input === correctPassword) {
@@ -256,23 +583,72 @@ function moveSlide(direction) {
       alert('Debes ingresar los 4 dígitos ESPECIALES.');
     }
   }
+  
   function goBack() {
     document.getElementById('notepadScreen').classList.remove('active');
     document.getElementById('passwordScreen').classList.add('active');
     input = '';
     updateDisplay();
   }
-  // Control de páginas
+  
   function showPage(n) {
     const pages = document.querySelectorAll('.notepad');
     pages.forEach(p => p.style.display = 'none');
     document.getElementById('page' + n).style.display = 'block';
   }
+  
   function nextPage(n) {
     showPage(n);
   }
+  
   function prevPage(n) {
     showPage(n);
+  }
+  
+  let currentSlide = 0;
+  function moveSlide(direction) {
+    const track = document.getElementById('carouselTrack');
+    const slides = track.children.length;
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = slides - 1;
+    if (currentSlide >= slides) currentSlide = 0;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  
+  // Control del panel de música
+  function togglePanel() {
+    const panel = document.getElementById('musicPanel');
+    const toggle = document.getElementById('musicToggle');
+    panel.classList.toggle('show');
+    toggle.classList.toggle('open');
+  }
+  
+  // Control de música y volumen
+  const music = document.getElementById('bgMusic');
+  const volumeSlider = document.getElementById('volumeSlider');
+  const volumeLabel = document.getElementById('volumeLabel');
+  
+  // Establecer volumen inicial al 30%
+  music.volume = 0.3;
+  
+  volumeSlider.addEventListener('input', function() {
+    music.volume = this.value / 100;
+    volumeLabel.textContent = this.value + '%';
+  });
+  
+  function toggleMusic() {
+    const icon = document.getElementById('musicIcon');
+    const btn = document.getElementById('musicBtn');
+    
+    if (music.paused) {
+      music.play();
+      icon.textContent = '⏸️';
+      btn.classList.add('playing');
+    } else {
+      music.pause();
+      icon.textContent = '▶️';
+      btn.classList.remove('playing');
+    }
   }
 </script>
 </body>
